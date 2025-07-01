@@ -73,7 +73,9 @@ export class UploadController {
             new SuccessResponseDto(
               0,
               HttpStatus.OK,
-              'Upload successful and your video is splitting',
+              type === UploadType.VIDEO
+                ? 'Upload successful and your video is splitting'
+                : 'Upload successful',
               { id: videoId },
             ),
           );
